@@ -49,8 +49,8 @@ export default {
   },
   methods: {
     login () {
-      this.$refs.loginFormref.validate((vaewe) => {
-        console.log(vaewe)
+      this.$refs.loginFormref.validate((valid) => {
+        console.log(valid)
       })
     },
     resrtForm () {
