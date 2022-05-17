@@ -2,7 +2,7 @@
   <div class="login_container">
     <div class="login_box">
       <div class="avatar_box">
-        <img src="../assets/logo.png" alt="">
+        <img src="../assets/logo.png" alt="" width="10px">
       </div>
       <el-form ref="loginFormref" :model="loginForm" :rules="loginFormRules">
         <el-form-item class="login_form" prop="username">
@@ -21,6 +21,7 @@
         <el-form-item class="login_button">
           <el-button type="primary" @click="login">登录</el-button>
           <el-button type="info" @click="resrtForm">重置</el-button>
+          <el-button @click="tiaozhuan">跳转</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -48,6 +49,9 @@ export default {
     }
   },
   methods: {
+    tiaozhuan () {
+      this.$router.replace('/firstpage')
+    },
     login () {
       this.$refs.loginFormref.validate((valid) => {
         console.log(valid)
